@@ -1,0 +1,230 @@
+/* Reset dasar */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background: linear-gradient(to bottom, #f7f8fc, #e6eaf2);
+  color: #333;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Kombinasi font */
+h1,
+h2 {
+  font-family: "Merriweather", serif;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+.contact-app {
+  width: 1200px;
+  margin: 32px auto;
+  padding: 24px;
+  background-color: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  transition: all 0.3s ease-in-out;
+}
+
+.contact-app:hover {
+  transform: scale(1.02);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Tambahkan animasi fade-in */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.contact-app {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Efek hover yang lebih halus */
+.contact-item:hover {
+  transform: translateY(-5px);
+  transition: transform 0.3s ease;
+}
+
+.contact-app h1 {
+  font-weight: 600;
+  font-size: 42px;
+  color: #2a3d66;
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.contact-item {
+  display: flex;
+  justify-content: space-between; /* Mengatur ruang antara konten kiri dan tombol delete */
+  align-items: center; /* Menjaga agar semua elemen sejajar secara vertikal */
+  margin: 10px 0;
+  padding: 10px;
+  background-color: #f9fafc;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+.contact-item__left {
+  display: flex;
+  align-items: center; /* Memastikan gambar, nama, dan username sejajar secara vertikal */
+}
+
+.contact-item__image {
+  margin-right: 12px; /* Memberikan jarak antara gambar dan teks */
+}
+
+.contact-item__image img {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  border: 2px solid #4f6db6;
+}
+
+.contact-item__body {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-item__title {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.contact-item__username {
+  color: #555;
+}
+
+.contact-item__delete {
+  padding: 8px 16px;
+  background-color: #ff4b5c;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.contact-item__delete:hover {
+  background-color: #ff6a6e;
+  transform: scale(1.1);
+}
+
+.contact-item__delete:focus {
+  outline: none;
+}
+
+/* Styling untuk ContactInput */
+.contact-input {
+  padding: 24px;
+  margin: 24px 0;
+  background: linear-gradient(to bottom right, #ffffff, #f2f5fc);
+  border: 1px solid #cfd8e3;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-input:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.contact-input input {
+  display: block;
+  width: 100%;
+  padding: 14px;
+  margin: 16px 0;
+  border: 2px solid #d1d9e6;
+  border-radius: 8px;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  outline: none;
+  background-color: #f9fafc;
+  color: #2a3d66;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-input input:focus {
+  border-color: #4f6db6;
+  box-shadow: 0 0 8px rgba(79, 109, 182, 0.3);
+}
+
+.contact-input input::placeholder {
+  color: #aab2c2;
+  font-size: 14px;
+}
+
+.contact-input button {
+  width: 100%;
+  padding: 14px;
+  margin-top: 16px;
+  background: linear-gradient(90deg, #4f6db6, #3e8ed0);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s ease-in-out;
+}
+
+.contact-input button:hover {
+  background: linear-gradient(90deg, #3e8ed0, #2d76c7);
+  transform: translateY(-2px);
+}
+
+.contact-input button:focus {
+  outline: none;
+  box-shadow: 0 0 8px rgba(62, 142, 208, 0.4);
+}
+
+/* Grid layout untuk kontak */
+.contact-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  cursor: pointer;
+}
+
+/* Styling untuk input file */
+.contact-input input[type="file"] {
+  display: block;
+  width: 100%;
+  padding: 14px;
+  margin: 16px 0;
+  border: 2px solid #d1d9e6;
+  border-radius: 8px;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  outline: none;
+  background-color: #f9fafc;
+  color: #2a3d66;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-input input[type="file"]:focus {
+  border-color: #4f6db6;
+  box-shadow: 0 0 8px rgba(79, 109);
+}
+/* Media queries untuk responsif */
+@media (max-width: 768px) {
+  .contact-app {
+    width: 90%;
+    margin: 16px auto;
+  }
+}
